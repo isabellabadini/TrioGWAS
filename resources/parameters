@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# logfiles
+results="${home_directory}/results"
+section_01_dir="${results}/01"
+section_02_dir="${results}/02"
+section_03_dir="${results}/03"
+section_04_dir="${results}/04"
+section_05_dir="${results}/05"
+
+section_01_logfile="${section_01_dir}/logs/log.txt"
+section_02_logfile="${section_02_dir}/logs/log.txt"
+section_03_logfile="${section_03_dir}/logs/log.txt"
+section_04_logfile="${section_04_dir}/logs/log.txt"
+section_05_logfile="${section_05_dir}/logs/log.txt"
+
+#Check data
+controlsnps_file="${home_directory}/resources/genetics/example-snp-check.txt"
+snplist="${home_directory}/resources/genetics/snplist.txt"
+
+# covariates present in the dataset
+covariate_list="${section_01_dir}/covariate_list.txt"
+
+# phenotypes present in the dataset
+phenotype_list="${section_01_dir}/phenotype_list.txt"
+updated_phenotype_file="${section_01_dir}/updated_phenotypes.txt"
+
+#summary data
+summary_file=${section_02_dir}/phen-cov-summary.txt
+
+#plink path
+plink="${home_directory}/resources/./plink1.90"

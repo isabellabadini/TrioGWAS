@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# General details
+
+# Please make sure this is alphanumeric (underscores allowed but no spaces)
+study_name="moba_trios"
+
+# Analyst's name
+analyst_name="Isabella Badini"
+
+# Analyst's email address
+analyst_email="i.badini@ucl.ac.uk"
+
+# Please put the full path to this directory
+# e.g. if the config file path is "/home/projects/trio_gwas/config"
+# then home_directory="/home/projects/trio_gwas"
+
+home_directory="/ess/pXXX/cluster/projects/trio_gwas"
+
+bfile_raw="${home_directory}/scratch/MoBaPsychGen_v1-ec-eur-batch-basic-qc.nodups"
+famfile="scratch/MoBaPsychGen_v1-ec-eur-batch-basic-qc.nodups.fam"
+phenotypes="scratch/phenotypes_outcomes.pheno"
+covariates="scratch/covariates.cov"
+
+# Imputation quality scores
+# This should be a file with three columns, SNP, MAF and quality scores
+quality_scores="scratch/snp.info"
+
+# Splitting data-set into chunks of e.g. 10,000 SNPs to run in batch
+chunks_snp_number="2000"
+
+# DO NOT MODIFY
+source ${home_directory}/resources/parameters
