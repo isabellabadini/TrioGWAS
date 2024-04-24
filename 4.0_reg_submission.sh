@@ -4,7 +4,7 @@
 #SBATCH --job-name=trio_gwas
 #
 #Project:
-#SBATCH --account=p471
+#SBATCH --account=pXXX
 #
 #Wall clock limit (change based on resources required):
 #SBATCH --time=50:00:00 
@@ -27,7 +27,7 @@ temp=$SLURM_ARRAY_TASK_ID
 pheno=${1}
 
 #Working directory
-outm="/cluster/projects/p471/projects/trio_gwas"
+outm="/cluster/projects/trio_gwas"
 
 #Load R
 #module add R/4.0.0-foss-2020a  
