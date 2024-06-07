@@ -1,3 +1,6 @@
+**Pipeline is still under development**
+Thanks to everyone that has already gone through the pipeline and reported any errors/difficulties. We are currently adapting the pipeline to run the GWAS models in LDAK versus R. This will significantly improve computational time and simplify the pre-processing of data for analysts. We will be in touch to confirm once the pipeline is ready and set up monthly calls for analysts. 
+
 # Trio GWAS
 
 This pipeline is designed to perform GWAS using mother-father-offspring trios and duos. The pipeline is designed to be fully automated, requiring minimal user input beyond the initial cleaning and formatting of phenotype and genotype data.
@@ -40,4 +43,4 @@ This script compiles the output files into a final summary statistics file. Subm
 
 Any queries to Isabella Badini [i.badini@ucl.ac.uk](i.badini@ucl.ac.uk)
 
-Note scripts were adapted from scripts included in the [within-sibling GWAS](https://github.com/LaurenceHowe/SiblingGWAS) [(Howe et al. 2022)](https://www.nature.com/articles/s41588-022-01062-7). 
+Note scripts were adapted from scripts included in the [within-sibling GWAS](https://github.com/LaurenceHowe/SiblingGWAS) [(Howe et al. 2022)](https://www.nature.com/articles/s41588-022-01062-7), which were adapted from scripts by GoDMC (Gibran Hemani et al) and the SSGAC (Sean Lee/Patrik Turley et al).
