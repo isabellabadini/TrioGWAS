@@ -27,8 +27,8 @@ trio_ids <- trio_ids %>%
          IID = "V2",
          PID = "V3",
          MID = "V4")
-#n_distinct(trio_ids$PID) # 36938 unique PIDs
-#n_distinct(trio_ids$MID) # 36984 unique MIDs
+#n_distinct(trio_ids$PID) 
+#n_distinct(trio_ids$MID) 
 
 off_trio_ids <- trio_ids %>%
   select(FID, IID)
