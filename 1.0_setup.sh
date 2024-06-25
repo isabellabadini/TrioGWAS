@@ -88,7 +88,7 @@ then
 #	--genome \
 #	--rel-check \
 #	--out ${section_01_dir}/rel
-	
+#	
 # 	plink2 \
 #	--bfile ${bfile_raw} 
 #	--make-king-table  
@@ -105,7 +105,7 @@ fi
 if [ "$arg" = "covariates" ] || [ "$arg" = "all" ] || [ "$arg" = "skipsib" ]
 then
 	section_message "covariates"
-	Rscript resources/checks/covariates.R \
+	Rscript resources/checks/covariates_updated.R \
 		${covariates} \
 		${bfile_raw}.fam \
 		${phenotypes} \

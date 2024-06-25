@@ -1,6 +1,7 @@
 errorlist <- list()
 warninglist <- list()
 
+.libPaths(c("/ess/p471/cluster/projects/trio_gwas/bin", .libPaths()))
 require(data.table)
 require(plyr)
 
@@ -56,7 +57,7 @@ if(names(ph)[2] !="IID")
 	warning("ERROR: ", msg)
 	}
 
-nom <- names(ph)[-1][names(ph)[-1] %in% c("BMI", "Height", "Education")]
+nom <- names(ph)[-1][names(ph)[-1] %in% c("height", "exam")]
 
 
 #Check genotype file
@@ -155,11 +156,11 @@ message("Generating updated phenotype file in ./results/01/.")
 write.table(ph, file=updated_phenotype_file, quote=F, row=F)		
 
 
-if("Height" %in% nom)
+if("height" %in% nom)
 {
 	message("Checking Height")
-	m1 <- mean(ph$Height,na.rm=T)
-	age.mean<-mean(cov$Age,na.rm=T)
+	m1 <- mean(ph$height,na.rm=T)
+	age.mean<-mean(cov$YOB,na.rm=T)
 	if((m1<100|m1>250)&age.mean>10)
 	{
 	msg <- paste0("please convert Height units to centimetres")
@@ -168,11 +169,11 @@ if("Height" %in% nom)
 	}
 }
 
-if("Height" %in% nom)
+if("height" %in% nom)
 {
 	message("Checking Height")
-	m1 <- mean(ph$Height,na.rm=T)
-	age.mean<-mean(cov$Age,na.rm=T)
+	m1 <- mean(ph$height,na.rm=T)
+	age.mean<-mean(cov$YOB,na.rm=T)
 	if((m1<20|m1>250)&age.mean<10)
 	{
 	msg <- paste0("please convert Height units to centimetres")
@@ -181,18 +182,18 @@ if("Height" %in% nom)
 	}
 }
 
-if("BMI" %in% nom)
-{
-	message("Checking BMI")
-	m1<-mean(ph$BMI,na.rm=T)
-	age.mean<-mean(cov$Age,na.rm=T)
-	if((m1<10|m1>40)&age.mean>2)
-	{
-	msg <- paste0("please convert BMI units to kg/m2")
-	errorlist <- c(errorlist, msg)
-	warning("ERROR: ", msg)
-	}
-}
+#if("BMI" %in% nom)
+#{
+#	message("Checking BMI")
+#	m1<-mean(ph$BMI,na.rm=T)
+#	age.mean<-mean(cov$Age,na.rm=T)
+#	if((m1<10|m1>40)&age.mean>2)
+#	{
+#	msg <- paste0("please convert BMI units to kg/m2")
+#	errorlist <- c(errorlist, msg)
+#	warning("ERROR: ", msg)
+#	}
+#}
 
 write.table(names(ph)[-2:-1], file=gwas_phenotype_list_file, row=F, col=F, qu=F)
 
