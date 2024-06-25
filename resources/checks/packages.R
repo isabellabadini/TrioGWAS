@@ -14,8 +14,8 @@ if(ch == -1)
 message("Checking that all required packages are present")
 
 pkglist <- c(
-	"lmtest",
-	"sandwich",
+	#"lmtest",
+	#"sandwich",
 	"data.table",
 	"plyr",
 	"matrixStats",
