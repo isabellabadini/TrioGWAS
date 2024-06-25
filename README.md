@@ -1,6 +1,3 @@
-**Pipeline is still under development**
-Thanks to everyone that has already gone through the pipeline and reported any errors/difficulties. We are currently adapting the pipeline to run the GWAS models in LDAK versus R. This will significantly improve computational time and simplify the pre-processing of data for analysts. We will be in touch to confirm once the pipeline is ready and set up monthly calls for analysts. 
-
 # Trio GWAS
 
 This pipeline is designed to perform GWAS using parent-offspring trios (mother-father-offspring) and duos (mother/father-offspring). The pipeline is designed to be fully automated, requiring minimal user input beyond the initial cleaning and formatting of phenotype and genotype data.
