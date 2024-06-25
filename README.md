@@ -10,7 +10,8 @@ This pipeline is designed to perform GWAS using parent-offspring trios (mother-f
 5.	Successfully genotyped genome-wide (recommended individual genotyping rate: > 95%) and imputed genotype data.
 
 **Software requirements**
-[LDAK6.beta](https://dougspeed.com/) 
+
+[LDAK](https://dougspeed.com/) (version: LDAK6.beta)
 
 **Input files**
 1. Genetic data: Binary PLINK format files (.bim, .fam, .bed)
