@@ -24,7 +24,7 @@
 
 
 #Working directory
-outm="/cluster/projects/p471/projects/trio_gwas"
+outm="/cluster/projects/trio_gwas"
 
 # Load R
 module add R/4.2.1-foss-2022a
