@@ -13,12 +13,12 @@ This pipeline is designed to perform GWAS using parent-offspring trios (mother-f
 [LDAK6.beta](https://dougspeed.com/) 
 
 **Input files**
-•	Genetic data: Binary PLINK format files (.bim, .fam, .bed).
-•	Phenotype data: Phenotype data for offspring.
-•	Covariates files:
-  Covariates file including sex, year of birth, genotyping batches, 20 PCs.
-  Covariates file excluding PCs: including sex, year of birth (yob), genotyping batches.
-•	List of trio offspring IDs: A file containing IDs of offspring who belong to a trio (refer to the example script extract-trio-pat-mat-ids.R).
+1. Genetic data: Binary PLINK format files (.bim, .fam, .bed)
+2. Phenotype data: Phenotype data for offspring
+3. Covariates files: 
+Covariates file including sex, year of birth, genotyping batches, 20 PCs 
+Covariates file excluding PCs: including sex, year of birth, genotyping batches
+4. List of trio offspring IDs: A file containing IDs of offspring who belong to a trio (refer to the example script extract-trio-pat-mat-ids.R).
 
 **Downloading and running the pipeline**
 
