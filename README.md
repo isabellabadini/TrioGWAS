@@ -7,18 +7,18 @@ This pipeline is designed to perform GWAS using parent-offspring trios (mother-f
 2.	Sample size greater than n=250 trios/duos
 3.	Data on at least one phenotype
 4.	Data on all covariates 
-5.	Successfully genotyped genome-wide (recommended individual genotyping rate: > 95%) and imputed genotype data.
+5.	SNP data containing genotyped and imputed SNPs (prior to imputation, we recommend excluding genotyped SNPs with missingness >5%)
 
 **Software requirements**
 
-[LDAK](https://dougspeed.com/) (version: LDAK6.beta)
+LDAK Version 6.beta - download from the final link on this page <br />
+https://dougspeed.com/downloads2/
 
 **Input files**
 1. Genetic data: Binary PLINK format files (.bim, .fam, .bed)
 2. Phenotype data: Phenotype data for offspring
-3. Covariates files: 
-Covariates file including sex, year of birth, genotyping batches, 20 PCs 
-Covariates file excluding PCs: including sex, year of birth, genotyping batches
+3. Two covariate files. The first file should include sex, year of birth, genotyping batches and 20 PCs. The second file should exclude PCs (i.e., include sex, 
+   year of birth, genotyping batches but NOT 20 PCs).
 4. List of trio offspring IDs: A file containing IDs of offspring who belong to a trio (refer to the example script extract-trio-pat-mat-ids.R).
 
 **Downloading and running the pipeline**
@@ -45,9 +45,7 @@ This script extracts summary data on all available phenotypes and genotypes.
 
 This script runs the regression models in [LDAK](https://dougspeed.com). Submission script is included in the pipeline. The script is set up to run several regression models separately on offspring, father, and mother genotypes without adjusting for the parental genotypes (non-within family analysis), and in mutually adjusted analyses that account for one or both parental genotypes (within-family analysis).
 
-Any queries to Isabella Badini [i.badini@ucl.ac.uk](i.badini@ucl.ac.uk)
-Wiki coming soon. 
-
-Note scripts were adapted from scripts included in the within-sibling GWAS (Howe et al. 2022), which were adapted from scripts by GoDMC (Gibran Hemani et al) and the SSGAC (Sean Lee/Patrik Turley et al).
+Any queries to Isabella Badini [i.badini@ucl.ac.uk](i.badini@ucl.ac.uk) <br />
+**Wiki coming soon**
 
 Note scripts were adapted from scripts included in the [within-sibling GWAS](https://github.com/LaurenceHowe/SiblingGWAS) [(Howe et al. 2022)](https://www.nature.com/articles/s41588-022-01062-7), which were adapted from scripts by GoDMC (Gibran Hemani et al) and the SSGAC (Sean Lee/Patrik Turley et al).
