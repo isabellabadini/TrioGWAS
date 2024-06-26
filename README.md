@@ -49,3 +49,4 @@ Any queries to Isabella Badini [i.badini@ucl.ac.uk](i.badini@ucl.ac.uk) <br />
 **Wiki coming soon**
 
 Note scripts were adapted from scripts included in the [within-sibling GWAS](https://github.com/LaurenceHowe/SiblingGWAS) [(Howe et al. 2022)](https://www.nature.com/articles/s41588-022-01062-7), which were adapted from scripts by GoDMC (Gibran Hemani et al) and the SSGAC (Sean Lee/Patrik Turley et al).
+For reference on LDAK, see [Speed et al. (2012)](https://doi.org/10.1016/j.ajhg.2012.10.010).
