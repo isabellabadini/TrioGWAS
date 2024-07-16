@@ -63,14 +63,18 @@ echo "Models 3 and 5 complete"
 ./ldak6.beta --linear ${section_03_dir}/model06_trios_${gwasoutcome} --trios YES --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --max-threads 8 > ${section_03_dir}/logs/model06_${gwasoutcome}.log 
 echo "Model 6 complete"
 
-# Remove temp pheno/covar files
+# Remove temporary/redudant files 
 rm ${section_03_dir}/temp.${gwasoutcome}.*
-
-# Remove LDAK progress files
 rm ${section_03_dir}/*.progress
+rm ${section_03_dir}/*.pvalues
+rm ${section_03_dir}/*.score
 
 # Create phenotype folder and move results files 
 mkdir -p ${section_03_dir}/${gwasoutcome}
 mv ${section_03_dir}/model*_${gwasoutcome}.* ${section_03_dir}/${gwasoutcome}/
+
+# Compress folder and create checksum file 
+tar -czvf ${section_03_dir}/${gwasoutcome}.tar.gz -C ${section_03_dir} ${gwasoutcome}
+sha256sum ${section_03_dir}/${gwasoutcome}.tar.gz > ${section_03_dir}/${gwasoutcome}.tar.gz.sha256
 
 echo "Completed analysis"
