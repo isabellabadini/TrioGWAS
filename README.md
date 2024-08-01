@@ -11,7 +11,7 @@ This pipeline is designed to perform GWAS using parent-offspring trios (mother-f
 
 **Software requirements**
 
-LDAK Version 6 - download from this page <br />
+LDAK Version 6 - download from this page: <br />
 https://dougspeed.com/downloads2/
 
 **Input files**
