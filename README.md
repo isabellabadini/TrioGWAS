@@ -46,7 +46,6 @@ This script extracts summary data on all available phenotypes and genotypes.
 This script runs the regression models in [LDAK](https://dougspeed.com). Submission script is included in the pipeline. The script is set up to run several regression models separately on offspring, father, and mother genotypes without adjusting for the parental genotypes (non-within family analysis), and in mutually adjusted analyses that account for one or both parental genotypes (within-family analysis).
 
 Any queries to Isabella Badini [i.badini@ucl.ac.uk](i.badini@ucl.ac.uk) <br />
-**Wiki coming soon**
 
 Note scripts were adapted from scripts included in the [within-sibling GWAS](https://github.com/LaurenceHowe/SiblingGWAS) [(Howe et al. 2022)](https://www.nature.com/articles/s41588-022-01062-7), which were adapted from scripts by GoDMC (Gibran Hemani et al) and the SSGAC (Sean Lee/Patrik Turley et al).
 For reference on LDAK, see [Speed et al. (2012)](https://doi.org/10.1016/j.ajhg.2012.10.010).
