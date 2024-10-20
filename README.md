@@ -47,7 +47,7 @@ This script runs the regression models in [LDAK](https://dougspeed.com). Submiss
 
 **3.1_unified_regression_ldak_sex**
 
-This script is set up to run regression models in [LDAK](https://dougspeed.com) for phenotypes where ‘sex’ should be excluded as a covariate. It's specifically designed for analysing sex-limited traits (i.e. traits expressed in only one sex, such as age at menarche) or when ‘sex’ itself is the outcome variable. The script automatically adjusts the covariate files by excluding ‘sex’ variable to prevent statistical issues like multicollinearity. Submission script is included in the pipeline. Similar to the main regression script, it runs several regression models separately on offspring, father, and mother genotypes without adjusting for parental genotypes (non-within-family analysis), as well as models that account for one or both parental genotypes (within-family analysis).
+This script is set up to run regression models in [LDAK](https://dougspeed.com) for phenotypes where ‘sex’ should be excluded as a covariate. It's specifically designed for analysing sex-limited traits (i.e. traits expressed in only one sex, such as age at menarche) or when sex itself is the outcome variable. The script automatically adjusts the covariate files by excluding ‘sex’ variable to prevent statistical issues like multicollinearity. Submission script is included in the pipeline. Similar to the main regression script, it runs several regression models separately on offspring, father, and mother genotypes without adjusting for parental genotypes (non-within-family analysis), as well as models that account for one or both parental genotypes (within-family analysis).
 
 Any queries to Isabella Badini [i.badini@ucl.ac.uk](i.badini@ucl.ac.uk) <br />
 
