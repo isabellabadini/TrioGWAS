@@ -33,15 +33,15 @@ ${section_03_dir}/temp.${gwasoutcome}
 
 # No adjustment for structure
 # Note!: Please save a 'covariates_nopcs.cov' file without the inclusion of PCs 1:20 in the 'scratch' folder
-./ldak6.beta --linear ${section_03_dir}/model001_all_nopc_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --sandwich YES --max-threads 8 > ${section_03_dir}/logs/model001_all_nopc_${gwasoutcome}.log
-./ldak6.beta --linear ${section_03_dir}/model001_trio_nopc_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --sandwich YES --keep scratch/trio_ids.txt --max-threads 8 > ${section_03_dir}/logs/model001_trio_nopc_${gwasoutcome}.log
-./ldak6.beta --linear ${section_03_dir}/model002_duos_mat_nopc_${gwasoutcome} --duos MOTHERS --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --max-threads 8 > ${section_03_dir}/logs/model002_matduos_nopc_${gwasoutcome}.log 
-./ldak6.beta --linear ${section_03_dir}/model003_duos_pat_nopc_${gwasoutcome} --duos FATHERS --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --max-threads 8 > ${section_03_dir}/logs/model003_patduos_nopc_${gwasoutcome}.log
+./ldak6.linux --linear ${section_03_dir}/model001_all_nopc_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --sandwich YES --max-threads 8 > ${section_03_dir}/logs/model001_all_nopc_${gwasoutcome}.log
+./ldak6.linux --linear ${section_03_dir}/model001_trio_nopc_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --sandwich YES --keep scratch/trio_ids.txt --max-threads 8 > ${section_03_dir}/logs/model001_trio_nopc_${gwasoutcome}.log
+./ldak6.linux --linear ${section_03_dir}/model002_duos_mat_nopc_${gwasoutcome} --duos MOTHERS --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --max-threads 8 > ${section_03_dir}/logs/model002_matduos_nopc_${gwasoutcome}.log 
+./ldak6.linux --linear ${section_03_dir}/model003_duos_pat_nopc_${gwasoutcome} --duos FATHERS --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --max-threads 8 > ${section_03_dir}/logs/model003_patduos_nopc_${gwasoutcome}.log
 echo "Models 1-3 without adjusting for PCs complete"
 
 # Adjustment for structure 
-./ldak6.beta --linear ${section_03_dir}/model01_all_pop_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --sandwich YES --max-threads 8 > ${section_03_dir}/logs/model01_all_${gwasoutcome}.log
-./ldak6.beta --linear ${section_03_dir}/model01_trio_pop_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --sandwich YES --keep scratch/trio_ids.txt --max-threads 8 > ${section_03_dir}/logs/model01_trio_${gwasoutcome}.log
+./ldak6.linux --linear ${section_03_dir}/model01_all_pop_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --sandwich YES --max-threads 8 > ${section_03_dir}/logs/model01_all_${gwasoutcome}.log
+./ldak6.linux --linear ${section_03_dir}/model01_trio_pop_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --sandwich YES --keep scratch/trio_ids.txt --max-threads 8 > ${section_03_dir}/logs/model01_trio_${gwasoutcome}.log
 echo "Model 1 complete"
 
 ## Models 2-5: Duos 
@@ -49,10 +49,10 @@ echo "Model 1 complete"
 # Models 2 and 3 (regressing parent genotype on offspring phenotype - i.e. swap offspring genotypes for their parents) are automatically peformed when doing a --duo analysis (see ReadMe for details on output files). 
 # Analysis is performed in the duo sample (excluding trios) 
 
-./ldak6.beta --linear ${section_03_dir}/model02_duos_mother_${gwasoutcome} --duos MOTHERS --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --max-threads 8 > ${section_03_dir}/logs/model02_matduos_${gwasoutcome}.log 
+./ldak6.linux --linear ${section_03_dir}/model02_duos_mother_${gwasoutcome} --duos MOTHERS --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --max-threads 8 > ${section_03_dir}/logs/model02_matduos_${gwasoutcome}.log 
 echo "Models 2 and 4 complete"
 
-./ldak6.beta --linear ${section_03_dir}/model03_duos_father_${gwasoutcome} --duos FATHERS --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --max-threads 8 > ${section_03_dir}/logs/model03_patduos_${gwasoutcome}.log
+./ldak6.linux --linear ${section_03_dir}/model03_duos_father_${gwasoutcome} --duos FATHERS --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --max-threads 8 > ${section_03_dir}/logs/model03_patduos_${gwasoutcome}.log
 echo "Models 3 and 5 complete" 
 
 ## Model 6: Trio model
@@ -60,7 +60,7 @@ echo "Models 3 and 5 complete"
 # Adjustment for BOTH parents genotype 
 # Note that within-family duo models (swapping offspring genotypes for their parents) within the trio sample only are automatically performed in the --trio analysis (see ReadMe for details on output files)
   
-./ldak6.beta --linear ${section_03_dir}/model06_trios_${gwasoutcome} --trios YES --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --max-threads 8 > ${section_03_dir}/logs/model06_${gwasoutcome}.log 
+./ldak6.linux --linear ${section_03_dir}/model06_trios_${gwasoutcome} --trios YES --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --max-threads 8 > ${section_03_dir}/logs/model06_${gwasoutcome}.log 
 echo "Model 6 complete"
 
 # Remove temporary/redudant files 
