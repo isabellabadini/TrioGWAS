@@ -1,4 +1,4 @@
-# Trio GWAS
+# Trios GWAS
 
 This pipeline is designed to perform GWAS using parent-offspring trios (mother-father-offspring) and duos (mother/father-offspring). The pipeline is designed to be fully automated, requiring minimal user input beyond the initial cleaning and formatting of phenotype and genotype data.
 
