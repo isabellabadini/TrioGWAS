@@ -32,7 +32,7 @@ quality_scores="scratch/snp.info"
 
 # List of phenotypes for which 'sex' should be excluded as a covariate (e.g. sex-limited traits or when analysing 'sex' as the outcome variable)
 # Please ensure the variable names match exactly those in your phenotype data file and avoid adding extra spaces or quotes within the string
-sex_specific_phenotypes="menarche_age,puberty_age"
+sex_specific_phenotypes="menarche_age,puberty_age,sex"
 
 # DO NOT MODIFY
 source ${home_directory}/resources/parameters
