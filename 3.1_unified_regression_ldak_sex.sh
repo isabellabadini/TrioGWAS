@@ -116,10 +116,10 @@ echo "Models 3 and 5 complete"
 echo "Model 6 complete"
 
 # Remove temporary/redudant files 
-rm ${section_03_dir}/temp.${gwasoutcome}.*
-rm ${section_03_dir}/*.progress
-#rm ${section_03_dir}/*.pvalues
-#rm ${section_03_dir}/*.score
+rm -f ${section_03_dir}/temp.${gwasoutcome}.*
+rm -f ${section_03_dir}/*.progress
+rm -f ${section_03_dir}/*.pvalues
+rm -f ${section_03_dir}/*.score
 
 # Create phenotype folder and move results files 
 mkdir -p ${section_03_dir}/${gwasoutcome}
