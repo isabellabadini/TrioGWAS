@@ -21,7 +21,7 @@ containsElement () {
 }
 
 arg="all"
-declare -a sections=('all' 'config' 'requirements' 'genetics' 'rel' 'siblings' 'covariates' 'phenotypes' 'skipsib')
+declare -a sections=('all' 'config' 'requirements' 'genetics' 'rel' 'covariates' 'phenotypes' 'skipsib') #'siblings'
 
 
 if [ -n "${1}" ]; then
