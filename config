@@ -22,6 +22,7 @@ famfile="scratch/MoBaPsychGen_v1-ec-eur-batch-basic-qc.nodups.fam"
 phenotypes="scratch/phenotypes_outcomes.pheno"
 covariates="scratch/covariates.cov"
 covariates_nopcs="scratch/covariates_nopcs.cov"
+trio_ids="scratch/trio_ids.txt"
 
 # Imputation quality scores
 # This should be a file with three columns, SNP, MAF and quality scores
