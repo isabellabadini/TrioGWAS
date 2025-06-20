@@ -1,4 +1,6 @@
 **ANNOUNCEMENT FOR WFC TRIOS GWAS** <br />
+**JUNE 2025 UPDATE:** For those running the pipeline from Jan 25, you no longer need to run the _FIX scripts. The main 3.0_unified_regression_ldak.sh and 3.0_unified_regression_ldak_sex.sh scripts have been updated to correctly specify the clustered sandwich estimator. Thus, I've removed these scripts from the main pipeline, and archived them here 'TrioGWAS-main/resources/archive/'. 
+
 We’ve identified an issue with the code we sent, where the code didn’t correctly specify the clustered sandwich estimator. As a result, we need to ask analysts involved in the WFC trios GWAS to re-run two population-based models both with and without adjusting for PCs. The scripts to perform the re-runs are 3.0_unified_regression_ldak_FIX.sh and 3.1_unified_regression_ldak_sex_FIX.sh. These scripts will run on the same files as the original, and save the results in a new separate folder, labelled with _clustered at the end of the file name. This means analysts will only need to return the re-run results, rather than the entire phenotype folder. Please note that I've updated the code in the original scripts now too. 
 
 # Trios GWAS
