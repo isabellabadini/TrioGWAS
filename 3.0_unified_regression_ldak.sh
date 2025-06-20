@@ -34,14 +34,14 @@ ${section_03_dir}/temp.${gwasoutcome}
 # No adjustment for structure
 # Note!: Please save a 'covariates_nopcs.cov' file without the inclusion of PCs 1:20 in the 'scratch' folder
 ./ldak6.linux --linear ${section_03_dir}/model001_all_nopc_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --families YES --max-threads 8 > ${section_03_dir}/logs/model001_all_nopc_${gwasoutcome}.log
-./ldak6.linux --linear ${section_03_dir}/model001_trio_nopc_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --families YES --keep scratch/trio_ids.txt --max-threads 8 > ${section_03_dir}/logs/model001_trio_nopc_${gwasoutcome}.log
+./ldak6.linux --linear ${section_03_dir}/model001_trio_nopc_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --families YES --keep ${trio_ids} --max-threads 8 > ${section_03_dir}/logs/model001_trio_nopc_${gwasoutcome}.log
 ./ldak6.linux --linear ${section_03_dir}/model002_duos_mat_nopc_${gwasoutcome} --duos MOTHERS --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --max-threads 8 > ${section_03_dir}/logs/model002_matduos_nopc_${gwasoutcome}.log 
 ./ldak6.linux --linear ${section_03_dir}/model003_duos_pat_nopc_${gwasoutcome} --duos FATHERS --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates_nopcs} --max-threads 8 > ${section_03_dir}/logs/model003_patduos_nopc_${gwasoutcome}.log
 echo "Models 1-3 without adjusting for PCs complete"
 
 # Adjustment for structure 
 ./ldak6.linux --linear ${section_03_dir}/model01_all_pop_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --families YES --max-threads 8 > ${section_03_dir}/logs/model01_all_${gwasoutcome}.log
-./ldak6.linux --linear ${section_03_dir}/model01_trio_pop_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --families YES --keep scratch/trio_ids.txt --max-threads 8 > ${section_03_dir}/logs/model01_trio_${gwasoutcome}.log
+./ldak6.linux --linear ${section_03_dir}/model01_trio_pop_${gwasoutcome} --pheno ${section_03_dir}/temp.${gwasoutcome}.pheno --bfile ${bfile_raw} --covar ${covariates} --families YES --keep ${trio_ids} --max-threads 8 > ${section_03_dir}/logs/model01_trio_${gwasoutcome}.log
 echo "Model 1 complete"
 
 ## Models 2-5: Duos 
